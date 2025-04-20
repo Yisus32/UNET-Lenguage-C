@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1745165185 source:c:\projects\ejemplos c++\docencia\vectoresparalelos\main.c
+	<stdio.h>
+	<stdlib.h>
+
