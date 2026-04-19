@@ -1,3 +1,9 @@
+/*
+*tile: Punteros
+*description: En esta lección se implementarán punteros y su manejo básico (lectura y escritura)
+*author: Jesus Altuve
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -36,11 +42,6 @@ int main()
     //Al sobreescribir los valores del puntero, sobreescribimos los de la variable original
     printf("La variable cedula originalmente contiene: %d\n", cedula);
     printf("La variable edad originalmente contiene: %d\n", edad);
-
-
-    //Conversi�n de punteros
-
-
 
     return 0;
 }

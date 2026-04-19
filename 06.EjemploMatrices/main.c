@@ -1,3 +1,9 @@
+/*
+*tile: Matrices
+*description: En esta lecciÃ³n aprenderemos a trabajar con la lectura y escritura de matrices (arreglos bidimencionales) usando ciclos
+*author: Jesus Altuve
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -10,7 +16,7 @@ int main()
         {12, 34, 10, 12, 30}
     };
 
-    //Lectura de datos estáticos de una matriz
+    //Lectura de datos estï¿½ticos de una matriz
 
     for(int i = 0; i <= 2; i ++)
     {

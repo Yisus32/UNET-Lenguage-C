@@ -1,26 +1,73 @@
+/*
+*tile: Funciones
+*description: Prototipado, definici贸n, implementaci贸n de funciones. Paso de par谩metros por valor y referencia.
+*author: Jesus Altuve
+*/
+
 #include <stdio.h>
 
-// Declaraci髇 de la funci髇 (prototipo)
-int sumar(int a, int b);
+/*
+	Declaracian de la funcion (prototipo): Es una promesa, es decir, mencionarle al compilador que en algun momento, se crear谩 una funci贸n
+	llamada sumar, que ser谩 de tipo entero y recibir谩 dos par谩metros de tipo int.
+
+*/
+int sumar(int, int);
+
+/*
+	El paso por valor se refiere a enviarle una copia de una variable cualquiera a una funci贸n, esto crea en memoria dos versiones de ese valor:
+	Uno dentro de la funci贸n y otro fuera de la funci贸n. Aunque son una copia uno del otro, ambos est谩n almacenados en diferentes ubicaciones de la RAM
+*/
+int pasoPorValor(int);
+
+/*
+	El paso por referenica se refiere a enviarle a la funci贸n la direcci贸n de memoria donde est谩 almacenado el valor original
+	as铆, se puede cambiar el valor original desde cualquier lado de la funci贸n.
+*/
+int pasoPorReferencia(int*);
+
+
+// Definicion de la funcion
+int sumar(int a, int b) {
+    return a + b;
+}
+
+int pasoPorValor(int miNumero) {
+	miNumero = miNumero + 100;
+	
+	return miNumero;
+}
+
+int pasoPorReferencia(int* miNumero) {
+	*miNumero = *miNumero + 100;
+	return *miNumero;
+}
 
 int main() {
     int num1, num2, resultado;
 
-    printf("Ingresa el primer n鷐ero: ");
+    printf("Ingresa el primer n锟絤ero: ");
     scanf("%d", &num1);
 
-    printf("Ingresa el segundo n鷐ero: ");
+    printf("Ingresa el segundo n锟絤ero: ");
     scanf("%d", &num2);
 
-    // Llamada a la funci髇
+    // Llamada o implementaci贸n de la funcion
     resultado = sumar(num1, num2);
 
-    printf("La suma es: %d\n", resultado);
-
+    printf("La suma es: %d\n\n", resultado);
+    
+    //Variable num1 llamada fuera de la funcion pasoPorValor
+    printf("Valor de num1 es: %d\n", num1);
+    printf("Valor de num1 modificado por la funci贸n pasoPorValor es: %d\n", pasoPorValor(num1));
+    printf("Valor de num1 despues de su llamada dentro de pasoPorValor es: %d\n\n", num1);
+    
+    //Variable num1 llamada fuera de la funcion pasoPorValor
+    printf("Valor de num2 es: %d\n", num2);
+    printf("Valor de num2 modificado por la funci贸n pasoPorReferencia es: %d\n", pasoPorReferencia(&num2));
+    printf("Valor de num2 despues de su llamada dentro de pasoPorReferencia es: %d\n\n", num2);
+    
+    printf("Notese que num1 sigue siendo el mismo antes y despu茅s de la modificacion. Solo cambio dentro de la funcion pasoPorValor\n");
+	printf("Mientras que num2 se modifico dentro de la funcion pasoPorReferencia y cambio afuera de la funcion tambien");
+	
     return 0;
-}
-
-// Definici髇 de la funci髇
-int sumar(int a, int b) {
-    return a + b;
 }

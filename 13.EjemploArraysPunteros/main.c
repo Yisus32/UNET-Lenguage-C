@@ -1,33 +1,39 @@
+/*
+*tile: Vectores de punteros
+*description: ImplementaciÃ³n de punteros almacenados dentro de una vector
+*author: Jesus Altuve
+*/
+
 #include <stdio.h>
 
 int main() {
     int array[5] = {1, 2, 3, 4, 5};
     int *ptr;
 
-    // Notación con puntero desplazamiento (pointer offset notation)
+    // Notacion con puntero desplazamiento (pointer offset notation)
     // Esta es la que usas en tu ejemplo original
-    printf("Notación con puntero desplazamiento:\n");
+    printf("Notacion con puntero desplazamiento:\n");
     for(ptr = array; (ptr - array) < 5; ++ptr) {
         printf("%d ", *ptr); // Usamos *ptr para acceder al valor
     }
     printf("\n\n");
 
-    // Notación con punteros con subíndice (pointer subscript notation)
-    printf("Notación con punteros con subíndice:\n");
+    // Notacion con punteros con subindice (pointer subscript notation)
+    printf("Notacion con punteros con subï¿½ndice:\n");
     for(ptr = array; (ptr - array) < 5; ++ptr) {
         printf("%d ", ptr[0]); // Equivalente a *ptr
     }
     printf("\n\n");
 
-    // Otra forma de notación con subíndice usando el array directamente
-    printf("Notación con subíndice de array:\n");
+    // Otra forma de notacion con subindice usando el array directamente
+    printf("Notacion con subindice de array:\n");
     for(int i = 0; i < 5; i++) {
         printf("%d ", array[i]);
     }
     printf("\n\n");
 
-    // Notación con aritmética de punteros
-    printf("Notación con aritmética de punteros:\n");
+    // Notacion con aritmï¿½tica de punteros
+    printf("Notacion con aritmetica de punteros:\n");
     for(int i = 0; i < 5; i++) {
         printf("%d ", *(array + i));
     }

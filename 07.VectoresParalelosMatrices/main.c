@@ -1,3 +1,9 @@
+/*
+*tile: Vectores paralelos a matrices
+*description: En esta lecciÃ³n aprenderemos a paralelizar vectores a matrices
+*author: Jesus Altuve
+*/
+
 #include <stdio.h>
 #include <string.h>
 
@@ -15,7 +21,7 @@ int main() {
     char nombres[FILAS][50] = {"Producto A", "Producto B", "Producto C"};
     float precios[FILAS] = {15.5, 25.3, 35.8};
 
-    printf("Información de Productos:\n");
+    printf("Informaciï¿½n de Productos:\n");
     printf("---------------------------------\n");
     for (int i = 0; i < FILAS; i++) {
         printf("Nombre: %s\n", nombres[i]);

@@ -1,10 +1,18 @@
+/*
+*tile: Método de la burbuja
+*description: Programa que mediante un método de ordenamiento permite arreglar en un vector o matriz sus valores de forma creciente o decreciente
+*author: Jesus Altuve
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
 int main()
 {
     int temperaturas[8] = {34, 12, 16, 18, 43, 40, 38, 25}; //Array de muestra
+    
     int i, j; //variables para los iteradores
+    
     int auxiliar; //variable temporal para contener el valor que esta siendo cambiado
     int bandera; //variable para determinar si fue ordenado
 
@@ -26,8 +34,6 @@ int main()
     for(i = 0; i <= 7; i++) {
         printf("%d\t", temperaturas[i]);
     }
-
-
 
     return 0;
 }

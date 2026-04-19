@@ -1,16 +1,22 @@
+/*
+*tile: ConversiÃ³n de punteros
+*description: LecciÃ³n donde aprenderemos a trabajar con conversiÃ³n de tipos de datos entre punteros
+*author: Jesus Altuve
+*/
+
 #include <stdio.h>
 
 int main() {
     int entero = 65;
     int *pEntero = &entero;
 
-    // Conversión de puntero a int a puntero a char
+    // Conversiï¿½n de puntero a int a puntero a char
     char *pChar = (char *)pEntero;
 
     printf("Valor como entero: %d\n", *pEntero);
     printf("Valor como caracter: %c\n", *pChar);
 
-    // Conversión de puntero a void (puntero genérico)
+    // Conversiï¿½n de puntero a void (puntero genÃ©rico)
     void *pVoid = (void *)pEntero;
 
     // Para usar el puntero void, necesitamos convertirlo de vuelta

@@ -1,3 +1,9 @@
+/*
+*tile: Aritmética de punteros
+*description: Uso de iteraciones, operadores, aritmética de valores y direcciones de memoria usando punteros
+*author: Jesus Altuve
+*/
+
 #include <stdio.h>
 
 int main() {

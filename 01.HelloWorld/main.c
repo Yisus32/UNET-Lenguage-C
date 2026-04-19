@@ -1,3 +1,9 @@
+/*
+*tile: Grupos numericos
+*description: PROGRAMA QUE MUESTRA GRUPOS DE 20 NUMEROS DESDE EL 0, LUEGO PREGUNTA SI QUIERE MOSTRAR MÁS GRUPOS (SI = 1, NO = 0)
+*author: Jesus Altuve
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -6,10 +12,9 @@
 
 int main() {
     int response = 0, counter = 0;
+    int i = 0;
 
     do{
-        int i;
-
         printf("%d ", i++);
 
         counter++;
@@ -17,8 +22,10 @@ int main() {
         if(counter == GROUPS) {
             printf("\n");
 
-            printf("Desea mostrar el siguiente grupo?: ");
-            scanf("%d",&response);
+			do {
+				printf("Desea mostrar el siguiente grupo?: ");
+            	scanf("%d",&response);	
+			}while(response != 0 && response != 1); // Validar que el usuario solo ingrese 0 y 1 como respuesta
 
             if(response == 0) {
                 break; //break termina la ejecucion del ciclo

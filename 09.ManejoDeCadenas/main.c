@@ -1,3 +1,9 @@
+/*
+*tile: Manejo de cadenas
+*description: En esta lección se implementan las librerias string.h y ctype.h para el procesamiento y manejo de cadenas de caracteres
+*author: Jesus Altuve
+*/
+
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h> // Para las funciones de clasificación de caracteres

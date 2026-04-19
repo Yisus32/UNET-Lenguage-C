@@ -1,3 +1,9 @@
+/*
+*tile: Método de la burbuja en matrices
+*description: En esta lección aprenderemos a trabajar con el método de la burbuja usando matrices, para ordener de forma creciente o decreciente
+*author: Jesus Altuve
+*/
+
 #include <stdio.h>
 
 int main() {
